@@ -308,13 +308,13 @@ function check()
     {
       moveTo(1930, y);
     }
-    if(y > 957)
+    if(y > 1030)
     {
       moveTo(x, -10);
     }
     else if(y < -10)
     {
-      moveTo(x, 957);
+      moveTo(x, 1030);
     }
     penDown();
   }
@@ -328,9 +328,9 @@ function check()
     {
       moveTo(0, y);
     }
-    if(y > 947)
+    if(y > 1080)
     {
-      moveTo(x, 947);
+      moveTo(x, 1080);
     }
     else if(y < 0)
     {
