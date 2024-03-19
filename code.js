@@ -170,7 +170,7 @@ onEvent("restartButton", "click", function() {
   paintAmount = 0;
   travelAmount = 0;
   index = 0;
-  setProperty("lengthImage", "image", tallLongImg[0]);
+  setProperty("lengthImage", "image", `![image of thing](${tallLongImg[0]})`);
   if(sfx) playSound("assets/category_tap/puzzle_game_organic_wood_block_tone_tap_1.mp3", false);
 });
 
@@ -310,7 +310,7 @@ function draw()
         height();
         if(!heightLooping)
         {
-          setProperty("lengthImage", "image", tallLongImg[index]);
+          setProperty("lengthImage", "image", `![image of thing](${tallLongImg[index]})`);
           setProperty("lengthText", "text", tallLongName[index] + " (" + tallLongHeight[index] + " feet)");
         }
         setProperty("discoveryText", "text", "colors discovered:" + (discoveryAmount/16777216).toFixed(6) + "%");
