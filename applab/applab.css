@@ -2447,11 +2447,7 @@ div.WireframeButtons_active {
 .draggingParent .textArea {
   outline: 0;
 }
-#divApplab.appModern img[data-canonical-image-url=""],
-#designModeViz.appModern img[data-canonical-image-url=""],
-.draggingParent img[data-canonical-image-url=""] {
-  display: none;
-}
+
 #divApplab.appModern .screen,
 #designModeViz.appModern .screen,
 .draggingParent .screen {
