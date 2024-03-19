@@ -311,6 +311,7 @@ function draw()
         if(!heightLooping)
         {
           setProperty("lengthImage", "image", `![image of thing](${tallLongImg[index]})`);
+          console.log('hi');
           setProperty("lengthText", "text", tallLongName[index] + " (" + tallLongHeight[index] + " feet)");
         }
         setProperty("discoveryText", "text", "colors discovered:" + (discoveryAmount/16777216).toFixed(6) + "%");
