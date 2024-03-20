@@ -240,28 +240,28 @@ function diyDraw()
       fadeCounter = 0;
     }
     penRGB(255, 255, 255, fadeCounter);
-    penWidth(10000);
+    penWidth(4500);
     moveForward(0.01);
-    var diyloop2 = timedLoop(1, function ()
-    {
-      r += randomNumber(-colorVariation, colorVariation);
-      g += randomNumber(-colorVariation, colorVariation);
-      b += randomNumber(-colorVariation, colorVariation);
-      a += (randomNumber(-1, 1) / 10);
-      check();
-      penWidth(randomNumber(1, 20));
-      penRGB(r, g, b, a);
-      
-      moveTo(diyX, diyY);
-      
-      setProperty("pencil", "x", getX()-5);
-      setProperty("pencil", "y", getY()-45);
-      if(!diy)
-      {
-        stopTimedLoop(diyloop2);
-      }
-    });
     if(!diy) stopTimedLoop(diyloop);
+  });
+  var diyloop2 = timedLoop(1, function ()
+  {
+    r += randomNumber(-colorVariation, colorVariation);
+    g += randomNumber(-colorVariation, colorVariation);
+    b += randomNumber(-colorVariation, colorVariation);
+    a += (randomNumber(-1, 1) / 10);
+    check();
+    penWidth(randomNumber(1, 20));
+    penRGB(r, g, b, a);
+    
+    moveTo(diyX, diyY);
+    
+    setProperty("pencil", "x", getX()-5);
+    setProperty("pencil", "y", getY()-45);
+    if(!diy)
+    {
+      stopTimedLoop(diyloop2);
+    }
   });
 }
 
@@ -275,11 +275,12 @@ function draw()
       fadeCounter = 0;
     }
     penRGB(255, 255, 255, fadeCounter);
-    penWidth(10000);
+    penWidth(4500);
     moveForward(0.01);
+    if(diy) stopTimedLoop(drawloop);
+
     var drawloop2 = timedLoop(1, function ()
     {
-      var counter = 0;
       r += randomNumber(-colorVariation, colorVariation);
       g += randomNumber(-colorVariation, colorVariation);
       b += randomNumber(-colorVariation, colorVariation);
@@ -320,14 +321,12 @@ function draw()
       }
       setProperty("pencil", "x", getX()-5);
       setProperty("pencil", "y", getY()-45);
-      counter++;
       
-      if(counter >= 20 || diy)
+      if(diy)
       {
         stopTimedLoop(drawloop2);
       }
     });
-    if(diy) stopTimedLoop(drawloop);
   });
 }
 
