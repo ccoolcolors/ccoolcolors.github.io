@@ -37,7 +37,7 @@ var diyY = 0;
 
 hide();
 penRGB(255, 255, 255, 1);
-penWidth(10000);
+penWidth(4406);
 moveTo(windowWidth/2, windowHeight/2);
 moveForward(0.1);
 windowResize();
@@ -158,7 +158,7 @@ onEvent("statsExit", "click", function() {
 
 onEvent("restartButton", "click", function() {
   penRGB(255, 255, 255, 1);
-  penWidth(10000);
+  penWidth(4406);
   moveTo(windowWidth/2, windowHeight/2);
   moveForward(0.1);
   r = randomNumber(128, 255);
@@ -240,7 +240,7 @@ function diyDraw()
       fadeCounter = 0;
     }
     penRGB(255, 255, 255, fadeCounter);
-    penWidth(4500);
+    penWidth(4406);
     moveForward(0.01);
     if(!diy) stopTimedLoop(diyloop);
   });
@@ -275,7 +275,7 @@ function draw()
       fadeCounter = 0;
     }
     penRGB(255, 255, 255, fadeCounter);
-    penWidth(4500);
+    penWidth(4406);
     moveForward(0.01);
     if(diy) stopTimedLoop(drawloop);
 
