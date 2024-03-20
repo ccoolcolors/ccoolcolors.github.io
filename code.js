@@ -281,6 +281,7 @@ function draw()
 
     var drawloop2 = timedLoop(1, function ()
     {
+      var counter = 0;
       r += randomNumber(-colorVariation, colorVariation);
       g += randomNumber(-colorVariation, colorVariation);
       b += randomNumber(-colorVariation, colorVariation);
@@ -321,8 +322,8 @@ function draw()
       }
       setProperty("pencil", "x", getX()-5);
       setProperty("pencil", "y", getY()-45);
-      
-      if(diy)
+      counter++;
+      if(diy || counter >= 20)
       {
         stopTimedLoop(drawloop2);
       }
