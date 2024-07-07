@@ -1,4 +1,4 @@
-a code.org project!!! made by ![this guy](https://mrshibaton.github.io)
+a code.org project!!! made by [this guy](https://mrshibaton.github.io)
 
 ![canvas](https://github.com/ccoolcolors/ccoolcolors.github.io/assets/162098427/37fbd304-d912-4c48-84d5-250d333060f4)
 
